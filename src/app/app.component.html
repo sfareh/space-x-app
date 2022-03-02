@@ -14,18 +14,11 @@
           <a class="nav-link" href="#capsule">CAPSULES</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#rocket">ROCKETS</a>
+          <a class="nav-link" routerLink="/rockets" routerLinkActive="active">ROCKETS</a>
         </li>
       </ul>
     </div>
   </nav>
   <h1>SPACE-X API</h1>
-
-
-<!-- LAUNCHES -->
-<app-capsules></app-capsules>
-<!-- CAPSULES -->
-<app-launches></app-launches>
-<!-- ROCKETS -->
-<app-rockets></app-rockets>
+  <router-outlet></router-outlet>
 </div>
