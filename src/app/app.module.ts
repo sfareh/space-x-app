@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LaunchesComponent } from './launches/launches.component';
 import { CapsulesComponent } from './capsules/capsules.component';
+import { RocketsComponent } from './rockets/rockets.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LaunchesComponent,
-    CapsulesComponent
+    CapsulesComponent,
+    RocketsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
