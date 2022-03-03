@@ -1,1 +1,47 @@
-<p>capsules works!</p>
+<div>
+
+  <!-- Black background with white text -->
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">SPACE-X</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Capsules</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Launches</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <h1 class="text-center text-danger">SPACE-X API</h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th class="text-center">Type</th>
+    <th class="text-center">Status</th>
+    <th class="text-center">Last update</th>
+    <th class="text-center">Land landings</th>
+    <th class="text-center">Water landings</th>
+    <th class="text-center">Reuse count</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor=" let capsule of capsules ">
+    <td class="text-center">{{capsule.type}}</td>
+    <td class="text-center">{{capsule.status}}</td>
+    <td class="text-center">{{capsule.last_update}}</td>
+    <td class="text-center">{{capsule.land_landings}}</td>
+    <td class="text-center">{{capsule.water_landings}}</td>
+    <td class="text-center">{{capsule.reuse_count}}</td>
+
+  </tr>
+  </tbody>
+</table>
+
+
