@@ -1,0 +1,28 @@
+# version of the docker-compose
+version: '3.8'
+# the different docker containers
+services:
+  #angular container
+  angular:
+    # name of the container
+    container_name: node-angular
+    # image used to build the container
+    image: 'node:16-alpine3.14'
+    # starting directory
+    working_dir: /app
+    # commands executed at launch
+    command:
+        # access the shell of the container
+      - /bin/sh
+        # specifiy the instructions are commands and not string
+      - '-c'
+        # install project dependencies from json package then launches angular app on localhost
+      - 'npm install && node_modules/.bin/ng serve --host 0.0.0.0'
+    # ports of the application
+    ports:
+        # links the port 4200 of the container to the port 4200 of localhost
+      - '4200:4200'
+    # volumes linked
+    volumes:
+        # the root folder of the application is linked to the /app directory of the container, aka the working directory containing the project
+      - './:/app'
