@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Rocket} from "../Model/rocket";
+import { RocketsService } from '../Services/rockets.service';
 
 @Component({
   selector: 'app-rockets',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RocketsComponent implements OnInit {
 
-  constructor() { }
+  rockets: Rocket[];
+  constructor(private rocketsService: RocketsService) { }
 
   ngOnInit(): void {
+    this.loadRockets();
   }
 
+  // Get rockets list
+  private loadRockets() {
+    return this.rocketsService.getRockets().subscribe(data => this.rockets = data);
+  }
 }

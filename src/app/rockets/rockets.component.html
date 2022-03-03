@@ -1,1 +1,55 @@
-<h1>Rockets from Space-X</h1>
+<h1>SpaceX Rockets</h1>
+<cdk-accordion class="accordion">
+  <cdk-accordion-item *ngFor="let rocket of rockets; let index = index;" #accordionItem="cdkAccordionItem"
+    class="accordion-item">
+    <div class="accordion-item-header" (click)="accordionItem.toggle()">
+      {{ rocket.name }}
+      <span class="accordion-item-description">
+        Click to {{ accordionItem.expanded ? 'close' : 'open' }}
+      </span>
+    </div>
+    <div class="accordion-item-body" [style.display]="accordionItem.expanded ? '' : 'none'">
+      <div class="m-3 text-center">{{rocket.description}}</div>
+      <div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="text-center">Height</th>
+              <th class="text-center">Diameter</th>
+              <th class="text-center">Mass</th>
+              <th class="text-center">Engines</th>
+              <th class="text-center">Active</th>
+              <th class="text-center">Cost per launch</th>
+              <th class="text-center">Success rate</th>
+              <th class="text-center">Country</th>
+              <th class="text-center">First flight</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="text-center">{{rocket.height.meters}} meters</td>
+              <td class="text-center">{{rocket.diameter.meters}} meters</td>
+              <td class="text-center">{{rocket.mass.kg}} &#13199;</td>
+              <td class="text-center">{{rocket.engines.number}}</td>
+              <td class="text-center">{{rocket.active}}</td>
+              <td class="text-center">{{rocket.cost_per_launch}} &dollar;</td>
+              <td class="text-center">{{rocket.success_rate_pct}} &percnt;</td>
+              <td class="text-center">{{rocket.country}}</td>
+              <td class="text-center">{{rocket.first_flight}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <img class="img-fluid" src={{rocket.flickr_images[0]}}>
+        <img class="img-fluid" src={{rocket.flickr_images[1]}}>
+        <img class="img-fluid" src={{rocket.flickr_images[2]}}>
+        <img class="img-fluid" src={{rocket.flickr_images[3]}}>
+        <img class="img-fluid" src={{rocket.flickr_images[4]}}>
+        <img class="img-fluid" src={{rocket.flickr_images[5]}}>
+        <img class="img-fluid" src={{rocket.flickr_images[6]}}>
+      </div>
+      <div>Plus d'informations : <a href={{rocket.wikipedia}}>Wikipédia</a></div>
+    </div>
+  </cdk-accordion-item>
+</cdk-accordion>
