@@ -48,9 +48,13 @@
         <img class="img-fluid" src={{rocket.flickr_images[4]}}>
         <img class="img-fluid" src={{rocket.flickr_images[5]}}>
         <img class="img-fluid" src={{rocket.flickr_images[6]}}>
+      </div><br>
+      <div>For more information: <a href={{rocket.wikipedia}}>Wikipedia</a></div><br />
+      <div>Associated with launches: &nbsp;&nbsp;&nbsp;&nbsp;
+        <span *ngFor="let launch of rocket.launches; last as isLast"> <span> {{launch.name}} </span> {{ isLast ? '' :
+          '&nbsp;, &nbsp; '}}
+        </span>
       </div>
-      <div>For more information: <a href={{rocket.wikipedia}}>Wikipedia</a></div>
-      <div>Associated with launches <span *ngFor="let launch of rocket.launches;">{{launch.name}} , </span></div>
     </div>
   </cdk-accordion-item>
 </cdk-accordion>
