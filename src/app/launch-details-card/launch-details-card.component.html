@@ -1,0 +1,20 @@
+<div class="launch-card">
+    <div class="card">
+        <div class="card-body">
+            <figure>
+                <img src="{{data.links.patch.small}}" alt="{{data.rocket.rocket_name}}">
+            </figure>
+
+            <h5 class="text-danger b">{{data.name}}</h5>
+
+            <ul>
+                <li>
+                    <h6><strong>Rocket Name : </strong> {{data.rocket}}</h6>
+                </li>
+                <li>
+                    <h6><strong>Launch Year : </strong> {{data.date_local | date:'yyyy'}}</h6>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
