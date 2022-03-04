@@ -8,9 +8,8 @@ import { CapsulesComponent } from './capsules/capsules.component';
 import { RocketsComponent } from './rockets/rockets.component';
 
 import { LaunchDetailsCardComponent } from './launch-details-card/launch-details-card.component';
-import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {CdkAccordionModule} from '@angular/cdk/accordion'; 
+import {CdkAccordionModule} from '@angular/cdk/accordion';
 
 
 @NgModule({
