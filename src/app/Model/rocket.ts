@@ -1,3 +1,5 @@
+import { Launches } from "./launches";
+
 export class Rocket {
     id: String;
     name: String;
@@ -32,5 +34,6 @@ export class Rocket {
 
     }
     wikipedia: String;
+    launches: Launches[];
 
 }
