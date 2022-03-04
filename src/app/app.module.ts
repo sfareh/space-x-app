@@ -6,7 +6,11 @@ import { AppComponent } from './app.component';
 import { LaunchesComponent } from './launches/launches.component';
 import { CapsulesComponent } from './capsules/capsules.component';
 import { RocketsComponent } from './rockets/rockets.component';
+
 import { LaunchDetailsCardComponent } from './launch-details-card/launch-details-card.component';
+import {HttpClientModule} from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {CdkAccordionModule} from '@angular/cdk/accordion'; 
 
 
 @NgModule({
@@ -20,7 +24,9 @@ import { LaunchDetailsCardComponent } from './launch-details-card/launch-details
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CdkAccordionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
